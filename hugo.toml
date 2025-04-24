@@ -1,0 +1,8 @@
+baseURL = 'http://localhost:1313/' # Temporary for local testing
+languageCode = 'en-us'
+title = 'Tvyal.com - Armenian Data Hub'
+theme = 'github.com/nunocoracao/blowfish/v2'
+
+[module]
+  [[module.imports]]
+    path = "github.com/nunocoracao/blowfish/v2"

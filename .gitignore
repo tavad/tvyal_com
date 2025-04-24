@@ -1,0 +1,41 @@
+# Hugo specific
+public/
+resources/
+.hugo_build.lock
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# User specific - directories/files to ignore
+test/
+/test/ # If test is only ever at the root of the project
+
+# Node/JS related (if you add JS dependencies later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python related (if needed for scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache/
+
+# R related (if needed, though renv manages dependencies well)
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Temporary files
+*.tmp
+*~
