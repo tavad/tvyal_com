@@ -1,80 +1,52 @@
-# **Tvyal.com Website Source**
-This repository contains the source code for the new [tvyal.com](http://tvyal.com) website, built using the [Hugo](https://gohugo.io/) static site generator and the [Blowfish](https://blowfish.page/) theme.
+# Tvyal.com Hugo Website
 
-## **Project Goal**
-To create a modern, flexible, version-controlled website serving as a hub for Armenian data, showcasing weekly analyses, attracting B2B clients, and supporting multilingual content (Armenian, English, Russian).
+This repository contains the source code for the Tvyal.com website, built with Hugo and the Congo theme.
 
-## **Features**
-- Multilingual content (Armenian, English, Russian)
-- Interactive data visualizations
-- Armenian data hub with downloadable datasets
-- FX rates monitoring and visualization
-- Weekly economic and data analysis newsletter
-- B2B data science services showcase
+## Project Overview
 
-## **Technology Stack**
-- **Framework:** Hugo (Extended Version)
-- **Theme:** Blowfish
-- **Content:** Markdown, RMarkdown (processed externally)
-- **Data Processing:** R scripts
-- **Visualization:** Plotly.js, ECharts.js
-- **Deployment:** GitHub Actions to GitHub Pages (initially)
+Tvyal.com is a hub for Armenian data (economic, social, demographic, etc.) and showcases data analysis expertise to attract B2B clients for data science services.
 
-## **Getting Started (Local Development)**
-1. Ensure you have Hugo Extended version installed (minimum v0.146.7+extended)
-2. Clone the repository:
-   ```
-   git clone <repository_url>
-   ```
-3. Navigate into the directory:
-   ```
-   cd tvyal_hugo
-   ```
-4. Download theme dependencies:
-   ```
-   hugo mod get -u
-   ```
-5. Start the local server:
-   ```
-   hugo server
-   ```
-6. Open your browser to http://localhost:1313/ (or the address provided by Hugo)
+## Setup Status
 
-## **Project Structure**
-- **content/**: All website content organized by sections
-  - **newsletter/**: Weekly analysis posts
-  - **data-hub/**: Armenian data catalog and documentation
-  - **fx-rates/**: Exchange rate visualization pages
-  - **services/**: B2B service descriptions
-  - **about/**: Company information
-  - **contact/**: Contact information
-- **static/**: Static files like images, downloadable data files
-- **layouts/**: Custom templates and shortcodes
-- **assets/**: CSS, JS, and other project assets
-- **config/**: Site configuration files
+### Phase 0: Preparation & Foundation (Setup) - COMPLETED
+- [x] Install Git
+- [x] Verify & Update Hugo: Hugo v0.146.7+extended installed
+- [x] Create GitHub Repository: tvyal_com created on GitHub
+- [x] Initialize Hugo Project: tvyal_hugo directory created, git init run
+- [x] Add Congo Theme & Configure: Theme installed directly in themes directory
+- [x] Basic Site Configuration: Created hugo.toml with necessary settings
+- [x] Initial Commit: Done (README.md, .gitignore, initial Hugo files)
+- [x] Push to GitHub: Repository successfully pushed to GitHub
 
-## **Content Management Workflow**
-1. Create RMarkdown files for newsletters and analyses
-2. Process these files with R to:
-   - Extract static plots and save as images
-   - Extract text content as Markdown
-   - Generate separate HTML files for interactive plots
-3. Place Markdown in content/newsletter/
-4. Place static images in static/images/
-5. Place interactive HTML files in static/interactive/
+### Phase 1: Basic Site Structure & Layout - IN PROGRESS
+- [ ] Define Site Structure based on vision:
+  - Home (potentially featuring FX highlights)
+  - Newsletter / Blog (weekly analysis)
+  - Armenian Data Hub (data catalog/downloads)
+  - FX Rates (dedicated interactive page)
+  - Services (B2B offerings)
+  - About
+  - Contact
+- [ ] Create Section Placeholders
+- [ ] Configure Navigation
+- [ ] Configure Basic Theme Options
+- [ ] Test Locally
+- [ ] Commit Changes
 
-## **Multilingual Support**
-The site supports three languages with content and UI translation:
-- English (en) - Default
-- Armenian (hy)
-- Russian (ru)
+## Development
 
-Language files are in i18n/ directory and language-specific content uses language codes in filenames (e.g., _index.en.md, _index.hy.md).
+To run the development server:
 
-## **Deployment**
-The site is automatically deployed when changes are pushed to the main branch using GitHub Actions. The workflow:
-1. Checks out the repository
-2. Sets up R and dependencies
-3. Runs data generation scripts
-4. Builds the Hugo site
-5. Deploys to GitHub Pages
+\`\`\`bash
+hugo server
+\`\`\`
+
+## Technology Stack
+
+- Static Site Generator: Hugo (v0.146.7+extended)
+- Theme: Congo (installed in themes directory)
+- Version Control: Git / GitHub
+- Deployment: GitHub Actions deploying to GitHub Pages (planned)
+- Primary Content Language: R / RMarkdown (for analysis)
+- Database (for dynamic data): Plan to use PostgreSQL or DuckDB
+- Future Backend (API/Login): Likely Go or Python
